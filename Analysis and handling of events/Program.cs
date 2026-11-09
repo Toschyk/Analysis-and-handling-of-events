@@ -158,8 +158,6 @@ internal static class Program
         }
         catch (Exception logEx)
         {
-            // Ошибка логирования НЕ должна скрывать основное исключение —
-            // выводим обе в stderr, а не молча глотаем.
             Console.Error.WriteLine(
                 $"Не удалось записать лог в файл {LogPath}: {logEx.Message}");
             Console.Error.WriteLine($"Исходное исключение: {ex}");
